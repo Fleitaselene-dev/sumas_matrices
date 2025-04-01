@@ -5,5 +5,3 @@
 #3 - Realizar la Suma de las 2 matrices en el servidor.
 #4 - Por ultimo mostrar la matiz resultante en el sitio web creado.
 
-cantidad_filas = input("Ingrese el numero de filas: ")
-cantidad_columnas = input("Ingrese cantidad de columnas:")
