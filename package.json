@@ -1,0 +1,25 @@
+{
+  "name": "suma_matrices",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "type",
+  "scripts": {
+    "dev": "node --watch server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fleitaselene-dev/sumas_matrices.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fleitaselene-dev/sumas_matrices/issues"
+  },
+  "homepage": "https://github.com/Fleitaselene-dev/sumas_matrices#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
+  }
+}

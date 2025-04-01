@@ -26,7 +26,7 @@ document.getElementById("generar").addEventListener("click", function() {
             }
             matriz.appendChild(row);
         }
-        matricesDiv.appendChild(matriz);
+        matrices.appendChild(matriz);
     }
 
     document.getElementById("sumar").style.display = "block";
