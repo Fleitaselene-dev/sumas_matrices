@@ -55,7 +55,7 @@ document.getElementById("sumar").addEventListener("click", function() {
         matriz2.push(row2);
     }
 
-    fetch("http://localhost:5000/sumar", {
+    fetch("http://localhost:4000/sumar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ matriz1, matriz2 })
@@ -66,18 +66,38 @@ document.getElementById("sumar").addEventListener("click", function() {
     })
     .catch(error => console.error("Error:", error));
 });
-
 function mostrarResultado(matriz) {
     let resultadoDiv = document.getElementById("resultado");
     resultadoDiv.innerHTML = "<h3>Matriz Resultante</h3>";
+    let matrizContainer = document.createElement("div");
+    matrizContainer.className = "matriz-resultado";
+    matrizContainer.style.display = "flex";
+    matrizContainer.style.flexDirection = "column";
+    matrizContainer.style.alignItems = "center";
+    matrizContainer.style.margin = "20px 0";
 
     matriz.forEach(fila => {
         let row = document.createElement("div");
+        row.style.display = "flex";
+        row.style.margin = "2px 0";
+        
         fila.forEach(valor => {
             let span = document.createElement("span");
-            span.textContent = valor + " ";
+            span.textContent = valor;
+            span.style.width = "50px";
+            span.style.height = "50px";
+            span.style.display = "flex";
+            span.style.justifyContent = "center";
+            span.style.alignItems = "center";
+            span.style.border = "2px solid darksalmon";
+            span.style.margin = "0 2px";
+            span.style.backgroundColor = "#fff8f7";
+            
             row.appendChild(span);
         });
-        resultadoDiv.appendChild(row);
+        
+        matrizContainer.appendChild(row);
     });
+    
+    resultadoDiv.appendChild(matrizContainer);
 }
